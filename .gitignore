@@ -1,0 +1,4 @@
+.omp-session/
+run.jsonl
+run.err
+*.env

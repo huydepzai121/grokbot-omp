@@ -1,0 +1,16 @@
+# Copy vào ~/.omp/agent/models.yml. Đặt key: export VIBER_API_KEY=...
+providers:
+  viber:
+    baseUrl: https://bedrock.viber.vn
+    api: anthropic-messages
+    apiKey: ${VIBER_API_KEY}
+    models:
+      - id: deepseek-v4.1-flash-1017
+        name: deepseek-v4.1-flash-1017 (Viber)
+        reasoning: true
+        input: [text, image]
+        tokenizer: claude-v5
+        contextWindow: 1000000
+        maxTokens: 128000
+        thinking: {mode: anthropic-adaptive, efforts: [low, medium, high, xhigh, max], supportsDisplay: true}
+        cost: {input: 5, output: 25, cacheRead: 0.5, cacheWrite: 6.25}
