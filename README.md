@@ -1,7 +1,6 @@
 # grokbot-omp-orchestrator-vn
 
 Grok Bot điều phối, **oh-my-pi (`omp`)** làm worker rẻ chạy headless trên box: mỗi việc một thư mục, trả về file kết quả + log JSON.
-Dựa trên [diginno-net/grokbot-dsh-orchestrator-vn](https://github.com/diginno-net/grokbot-dsh-orchestrator-vn) (bản gốc dùng `dsh`), chuyển sang `omp`.
 
 ## Cài đặt
 1. Cài bun và omp:
@@ -25,7 +24,7 @@ Mặc định `viber/deepseek-v4.1-flash-1017` (đổi bằng `OMP_MODEL`). Kế
 Chạy thử 21/10/2026 với `viber/deepseek-v4.1-flash-1017` (làm sạch CSV đơn hàng → doanh thu theo khách/tháng): **exit 0, 51 giây**, số liệu khớp hoàn toàn với đối chiếu độc lập.
 
 ## Lưu ý
-- omp không có sandbox `workspace-write` như dsh: giới hạn phạm vi bằng prompt và `--tools`.
+- omp không tự giới hạn việc ghi file trong thư mục: giới hạn phạm vi bằng prompt và `--tools`.
 - Mọi việc gửi/ghi ra ngoài (Gmail, Lark, Zalo, Drive...) vẫn do Grok Bot làm qua bước duyệt.
 
-Giấy phép: xem LICENSE (theo repo gốc).
+Giấy phép: MIT, xem LICENSE.

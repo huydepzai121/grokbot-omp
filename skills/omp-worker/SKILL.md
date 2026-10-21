@@ -20,5 +20,5 @@ description: Giao việc rẻ cho oh-my-pi (omp) chạy headless trên box: xử
 6. Gom kết quả; mọi thứ gửi ra ngoài vẫn qua bước duyệt/draft của Grok Bot.
 
 ## Lưu ý
-- omp không có sandbox workspace-write như dsh: giới hạn bằng prompt và `--tools=read,write,edit,bash` nếu cần.
+- omp không tự giới hạn việc ghi file trong thư mục: giới hạn bằng prompt và `--tools=read,write,edit,bash` nếu cần.
 - Lỗi `403 Insufficient account balance` = proxy hết tiền; nạp tiền hoặc đổi provider trong models.yml.
