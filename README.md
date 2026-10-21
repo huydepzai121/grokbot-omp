@@ -21,12 +21,8 @@ scripts/run-omp.sh [--model provider/model] <thu-muc> <file-prompt | "prompt">
 ```
 Mặc định `viber/deepseek-v4.1-flash-1017` (đổi bằng `OMP_MODEL`). Kết quả trong thư mục: `run.jsonl` (sự kiện), `final.txt` (trả lời cuối), `run.err`, `meta.json` (exit, thời gian). Exit 0 = xong.
 
-## Benchmark (examples/don-hang)
-```sh
-mkdir -p /tmp/work/don-hang && cp examples/don-hang/don_hang_tho.csv /tmp/work/don-hang/
-scripts/run-omp.sh /tmp/work/don-hang examples/don-hang/prompt.txt
-```
-Kết quả 21/10/2026 với `viber/deepseek-v4.1-flash-1017`: **exit 0, 51 giây**, tạo `clean.py`, `result.csv`, `summary.md`. Đối chiếu bằng script độc lập: 42 dòng gốc, 2 trùng, 1 thiếu số lượng, tổng doanh thu 56.280.000 đ, top 3 Minh Phát / Hoàng Long / Trần Thị Bích, tháng cao nhất 2026-08 (26.550.000 đ) — **khớp hoàn toàn**.
+## Benchmark
+Chạy thử 21/10/2026 với `viber/deepseek-v4.1-flash-1017` (làm sạch CSV đơn hàng → doanh thu theo khách/tháng): **exit 0, 51 giây**, số liệu khớp hoàn toàn với đối chiếu độc lập.
 
 ## Lưu ý
 - omp không có sandbox `workspace-write` như dsh: giới hạn phạm vi bằng prompt và `--tools`.
