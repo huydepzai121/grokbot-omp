@@ -1,4 +1,4 @@
-# grokbot-omp-orchestrator-vn
+# grokbot-omp
 
 Grok Bot điều phối, **oh-my-pi (`omp`)** làm worker rẻ chạy headless trên box: mỗi việc một thư mục, trả về file kết quả + log JSON.
 
